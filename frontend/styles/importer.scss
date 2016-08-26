@@ -7,3 +7,7 @@
         'tripanel';
 
 @import 'theme';
+
+button, a {
+  touch-action: manipulation;
+}
