@@ -1,0 +1,15 @@
+$ch-slider-bar-height: 8px;
+$ch-slider-bar-color: #cccccc;
+$ch-slider-fill-color: #4d8aeb;
+$ch-slider-handle-color: #fff;
+$ch-slider-handle-height: 40px;
+$ch-slider-handle-width: 40px;
+
+@import 'angular-range-slider/src/scss/slider.scss';
+
+.ch-slider-handle {
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5), 1px 3px 5px rgba(0, 0, 0, 0.25);
+}
+.ch-slider-line {
+  display: none;
+}

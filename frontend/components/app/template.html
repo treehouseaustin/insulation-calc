@@ -1,0 +1,36 @@
+<tri-panel position="{{ $ctrl.showPrice ? 'right' : 'left' }}" ng-controller="insulationPricingCalculator">
+  <section class="light">
+    <trh-icon type="weatherization" outline></trh-icon>
+    <h1>Insulation<br />&amp; Air Sealing<br /><small>Calculator</small></h1>
+  </section>
+  <section class="pricing-calculator" ng-cloak>
+    <button class="button outlined large" ng-click="$ctrl.showPrice = false" ng-show="$ctrl.showPrice">Back</button>
+
+    <label>Stories</label>
+    <h2>{{ floors }}</h2>
+    <slider model="floors" step="1" min="1" max="3"></slider>
+
+    <label>Home Size</label>
+    <h2>{{ sqFt }} sqft</h2>
+    <slider model="sqFt" step="5" min="800" max="3500"></slider>
+
+    <label>Electricity Bill</label>
+    <h2>${{ utilities }} mo</h2>
+    <slider model="utilities" step="5" min="50" max="500"></slider>
+
+    <button class="button large primary" ng-click="$ctrl.showPrice = true" ng-show="!$ctrl.showPrice">Calculate</button>
+  </section>
+  <section class="light">
+    <h1>Well, hello there!</h1>
+    <div class="row">
+      <div class="column large-6">
+        <label>Estimated Price</label>
+        <h2><sup>$ </sup>{{ price | currency:'':0 }}</h2>
+      </div>
+      <div class="column large-6">
+        <label>Potential Savings</label>
+        <h2><sup>$ </sup>{{ savings | currency:'':0 }} <small>/ month</small></h2>
+      </div>
+    </div>
+  </section>
+</tri-panel>

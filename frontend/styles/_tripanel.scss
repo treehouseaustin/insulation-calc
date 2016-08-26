@@ -1,0 +1,45 @@
+tri-panel {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  section {
+    @include trh-transition(all, .4s);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    padding: 40px;
+    &:nth-child(1) {
+      left: 0;
+      opacity: 1;
+      right: 50%;
+    }
+    &:nth-child(2) {
+      left: 50%;
+      right: 0;
+      z-index: 10;
+    }
+    &:nth-child(3) {
+      left: 65%;
+      opacity: 0;
+      right: -15%;
+    }
+  }
+  &[position="right"] {
+    section:nth-child(1) {
+      opacity: 0.3;
+      left: -15%;
+      right: 35%;
+    }
+    section:nth-child(2) {
+      left: 0;
+      right: 50%;
+    }
+    section:nth-child(3) {
+      left: 50%;
+      opacity: 1;
+      right: 0;
+    }
+  }
+}

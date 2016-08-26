@@ -1,0 +1,49 @@
+@charset 'utf-8';
+
+@import 'core/style/importer';
+
+@import 'tripanel',
+        'slider';
+
+
+tri-panel {
+  section {
+    &:nth-child(1) {
+      trh-icon svg {
+        height: 150px;
+        width: 150px;
+      }
+      h1 {
+        @include trh-font(gotham narrow, medium);
+        color: #38505B;
+        font-size: 74px;
+        letter-spacing: -0.5px;
+        line-height: 74px;
+        padding-top: 54px;
+        small {
+          color: trh-color(slate);
+          font-size: 74px;
+        }
+      }
+    }
+    &:nth-child(2) {
+      background: #E7F5FA;
+    }
+  }
+}
+
+.pricing-calculator {
+  padding-top: 180px;
+  button.outlined {
+    @include trh-button-colorize(transparent, transparent, $color-sky-dark, $color-sky-darker);
+    border-width: 1px;
+    position: absolute;
+    top: 40px;
+  }
+  button.primary {
+    @include trh-button-colorize($color-sky-dark, $color-sky-darker);
+    bottom: 40px;
+    position: absolute;
+    right: 40px;
+  }
+}
