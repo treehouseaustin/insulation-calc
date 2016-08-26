@@ -10,7 +10,7 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 var moduleConfig = {
   loaders: [
     { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
-    { test: /\.s?css$/, loader: ExtractTextPlugin.extract(['css?-minimize', 'sass']) },
+    { test: /\.s?css$/, loader: ExtractTextPlugin.extract(['css?-url', 'sass']) },
     { test: /\.html$/, loader: 'html' },
     { test: /\.svg$/, loader: 'svg-inline' }
   ]

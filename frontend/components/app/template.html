@@ -1,36 +1,37 @@
-<tri-panel position="{{ $ctrl.showPrice ? 'right' : 'left' }}" ng-controller="insulationPricingCalculator">
+<tri-panel visible="left" ng-controller="insulationPricingCalculator">
   <section class="light">
     <trh-icon type="weatherization" outline></trh-icon>
     <h1>Insulation<br />&amp; Air Sealing<br /><small>Calculator</small></h1>
   </section>
   <section class="pricing-calculator" ng-cloak>
-    <button class="button outlined large" ng-click="$ctrl.showPrice = false" ng-show="$ctrl.showPrice">Back</button>
-
     <label>Stories</label>
     <h2>{{ floors }}</h2>
     <slider model="floors" step="1" min="1" max="3"></slider>
 
     <label>Home Size</label>
-    <h2>{{ sqFt }} sqft</h2>
+    <h2>{{ sqFt | number:0 }}<small> sqft</small></h2>
     <slider model="sqFt" step="5" min="800" max="3500"></slider>
 
     <label>Electricity Bill</label>
-    <h2>${{ utilities }} mo</h2>
+    <h2><small>$ </small>{{ utilities }}<small> mo</small></h2>
     <slider model="utilities" step="5" min="50" max="500"></slider>
 
-    <button class="button large primary" ng-click="$ctrl.showPrice = true" ng-show="!$ctrl.showPrice">Calculate</button>
+    <button class="button large primary expanded" ng-click="$ctrl.showPrice = true">Get a Consult</button>
   </section>
   <section class="light">
-    <h1>Well, hello there!</h1>
+    <p>This space intentionally blank.</p>
+  </section>
+  <modal ng-class="{ open: $ctrl.showPrice }">
+    <button class="button" ng-click="$ctrl.showPrice = false">&larr; Back</button>
     <div class="row">
-      <div class="column large-6">
+      <div class="column large-4 large-offset-2">
         <label>Estimated Price</label>
-        <h2><sup>$ </sup>{{ price | currency:'':0 }}</h2>
+        <h2><small>$ </small>{{ price | currency:'':0 }}</h2>
       </div>
-      <div class="column large-6">
+      <div class="column large-4 end">
         <label>Potential Savings</label>
-        <h2><sup>$ </sup>{{ savings | currency:'':0 }} <small>/ month</small></h2>
+        <h2><small>$ </small>{{ savings | currency:'':0 }}<small> mo</small></h2>
       </div>
     </div>
-  </section>
+  </modal>
 </tri-panel>

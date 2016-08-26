@@ -26,7 +26,7 @@ tri-panel {
       right: -15%;
     }
   }
-  &[position="right"] {
+  &[visible="right"] {
     section:nth-child(1) {
       opacity: 0.3;
       left: -15%;

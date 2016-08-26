@@ -1,0 +1,21 @@
+modal {
+  @include trh-transition();
+  background-image: url('images/gradient.png');
+  background-repeat: none;
+  background-size: cover;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  padding: 36px 30px 30px;
+  position: absolute;
+  pointer-events: none;
+  right: 0;
+  transform: translateY(50%);
+  z-index: 20;
+  &.open {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+  }
+}

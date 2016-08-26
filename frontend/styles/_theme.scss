@@ -1,0 +1,89 @@
+tri-panel {
+  section {
+    &:nth-child(1) {
+      trh-icon svg {
+        height: 96px;
+        width: 96px;
+      }
+      h1 {
+        @include trh-font(gotham narrow, medium);
+        color: #38505B;
+        font-size: 72px;
+        letter-spacing: -0.33px;
+        line-height: 72px;
+        padding-top: 37px;
+        small {
+          color: trh-color(slate);
+          font-size: 72px;
+        }
+      }
+    }
+    &:nth-child(2) {
+      background: #E7F5FA;
+    }
+  }
+}
+
+.pricing-calculator {
+  label {
+    color: trh-color(slate, darker, 0.4);
+    font-size: 18px;
+    letter-spacing: 0.38px;
+    line-height: 36px;
+  }
+  h2 {
+    @include trh-font(gotham narrow, book);
+    font-size: 64px;
+    line-height: 60px;
+    padding-bottom: 12px;
+    small {
+      color: trh-color(slate, dark);
+      font-size: 48px;
+      text-transform: uppercase;
+    }
+  }
+  button.primary {
+    border-radius: 3px;
+    font-size: 20px;
+    letter-spacing: 1.25px;
+    line-height: 72px;
+  }
+  slider {
+    display: block;
+    height: 72px;
+    margin: 0 20px;
+  }
+}
+
+modal {
+  button.button {
+    @include trh-button-colorize($color-slate-darker, $color-slate-dark, $color-slate, $color-slate-light);
+    left: 1rem;
+    min-width: 0;
+    position: absolute;
+    top: 1rem;
+  }
+  label {
+    @include trh-font(gotham narrow, medium);
+    color: trh-color(slate);
+    font-size: 18px;
+    letter-spacing: 0.38px;
+    line-height: 36px;
+  }
+  .column.large-offset-2 {
+    border-right: 1px solid trh-color(slate);
+    margin-right: 4rem;
+  }
+  h2 {
+    @include trh-font(gotham narrow, book);
+    color: #FFF;
+    font-size: 78px;
+    letter-spacing: 0;
+    line-height: 60px;
+    small {
+      color: trh-colod(slate);
+      font-size: 48px;
+      text-transform: uppercase;
+    }
+  }
+}
