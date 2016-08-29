@@ -60,10 +60,34 @@ tri-panel {
     line-height: 72px;
   }
   slider {
-    border-left: 1px solid trh-color(tree);
+    border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
     display: block;
-    margin: 0 20px 48px;
+    margin: 0 20px 36px;
+    position: relative;
+    &[model=floors]:after,
+    &[model=floors]:before,
+    &[model=floors] .ch-slider:after {
+      background: #E7F5FA;
+      border: 1px solid trh-color(slate);
+      border-radius: 100%;
+      content: ' ';
+      display: block;
+      height: 40px;
+      right: -20px;
+      position: absolute;
+      pointer-events: none;
+      top: 0;
+      width: 40px;
+      z-index: 3;
+    }
+    &[model=floors]:before {
+      left: -20px;
+      right: unset;
+    }
+    &[model=floors] .ch-slider:after {
+      right: calc(50% - 20px);
+    }
   }
 }
 

@@ -9,7 +9,7 @@ $ch-slider-handle-width: 40px;
 
 .ch-slider-handle {
   box-shadow: 0px 2px 10px 0px rgba(43, 63, 73, .40);
-  z-index: 3;
+  z-index: 5;
 }
 .ch-slider-line {
   display: none;
@@ -26,6 +26,5 @@ $ch-slider-handle-width: 40px;
   z-index: 1;
 }
 .ch-slider-fill:after {
-  border-top: 1px solid trh-color(tree);
   z-index: 2;
 }
