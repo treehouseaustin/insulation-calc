@@ -16,13 +16,13 @@
     <h2><small>$ </small>{{ utilities }}<small> mo</small></h2>
     <slider model="utilities" step="5" min="50" max="500"></slider>
 
-    <button class="button large primary expanded" ng-click="$ctrl.showPrice = true">Get a Consult</button>
+    <button class="button large primary expanded" ng-click="$ctrl.togglePrice()">Get a Consult</button>
   </section>
   <section class="light">
     <p>This space intentionally blank.</p>
   </section>
   <modal ng-class="{ open: $ctrl.showPrice }">
-    <button class="button" ng-click="$ctrl.showPrice = false">&larr; Back</button>
+    <button class="button" ng-click="$ctrl.togglePrice()">&larr; Back</button>
     <div class="row">
       <div class="column large-4 large-offset-2">
         <label>Estimated Price</label>
@@ -34,6 +34,6 @@
       </div>
     </div>
     <h3>Get your free consult!</h3>
-    <sf-lead-form class="row" small action="https://tree.house/lead/new" sfid="00D36000000JarI" project="(Kiosk) Insulation + Sealing" type="insulationWeatherization"></sf-lead-form>
+    <sf-lead-form action="https://tree.house/lead/new" class="row" lead-source="Kiosk" project="(Kiosk) Insulation + Sealing" sfid="00D36000000JarI" small type="insulationWeatherization"></sf-lead-form>
   </modal>
 </tri-panel>
