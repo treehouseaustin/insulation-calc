@@ -6,16 +6,12 @@ modal {
   bottom: 0;
   top: 0;
   left: 0;
-  opacity: 0;
   padding: 36px 30px 30px;
   position: absolute;
-  pointer-events: none;
   right: 0;
-  transform: translateY(50%);
+  transform: translateY(100%);
   z-index: 20;
   &.open {
-    opacity: 1;
-    pointer-events: all;
     transform: translateY(0);
   }
 }

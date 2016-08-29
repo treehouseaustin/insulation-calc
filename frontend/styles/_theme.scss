@@ -1,3 +1,14 @@
+html {
+  height: 100%;
+}
+body {
+  transform: translateZ(0);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 tri-panel {
   section {
     &:nth-child(1) {
@@ -82,7 +93,7 @@ modal {
     letter-spacing: 0;
     line-height: 60px;
     small {
-      color: trh-colod(slate);
+      color: trh-color(slate);
       font-size: 48px;
       text-transform: uppercase;
     }

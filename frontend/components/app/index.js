@@ -5,9 +5,9 @@ angular.module('TreeHouse.component.app', [])
     this.showPrice = false;
 
     this.togglePrice = function() {
+      var firstName = document.getElementById('first_name');
       this.showPrice = !this.showPrice;
       $timeout(() => {
-        var firstName = document.getElementById('first_name');
         firstName[this.showPrice ? 'focus' : 'blur']();
       }, 400);
     }
