@@ -5,11 +5,16 @@ angular.module('TreeHouse.component.app', [])
     this.showPrice = false;
 
     this.togglePrice = function() {
-      var firstName = document.getElementById('first_name');
       this.showPrice = !this.showPrice;
-      $timeout(() => {
-        firstName[this.showPrice ? 'focus' : 'blur']();
-      }, 400);
+      this.resetLeadForm();
+
+      var firstName = document.getElementById('first_name');
+      $timeout(() => firstName[this.showPrice ? 'focus' : 'blur'](), 400);
+    }
+
+    this.resetLeadForm = function() {
+      angular.element(document.querySelectorAll('sf-lead-form form')).scope().sflead.$setPristine();
+      this.lead = { type: this.lead.type };
     }
   }]
 });
