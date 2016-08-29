@@ -49,9 +49,11 @@ tri-panel {
     line-height: 72px;
   }
   slider {
+    border-left: 1px solid $ch-slider-bar-color;
+    border-right: 1px solid $ch-slider-bar-color;
     display: block;
-    height: 72px;
-    margin: 0 20px;
+    margin: 24px 20px 48px;
+    padding: 12px 0;
   }
 }
 
@@ -85,5 +87,11 @@ modal {
       font-size: 48px;
       text-transform: uppercase;
     }
+  }
+  h3 {
+    @include trh-font(gotham narrow, medium);
+    color: #FFF;
+    font-size: 24px;
+    line-height: 24px;
   }
 }
