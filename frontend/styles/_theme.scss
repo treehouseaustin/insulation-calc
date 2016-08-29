@@ -93,7 +93,18 @@ modal {
     font-size: 24px;
     line-height: 24px;
   }
-  input[type="submit"] {
+  input[type=submit] {
     opacity: 0 !important;
+  }
+  input[type=email],
+  input[type=tel],
+  input[type=text] {
+    background: transparent;
+    border-color: trh-color(slate);
+    color: trh-color(slate);
+    &:focus {
+      border-color: #FFF;
+      color: trh-color(tree);
+    }
   }
 }
