@@ -1,9 +1,8 @@
 angular.module('TreeHouse.calculator', [])
 .controller('insulationPricingCalculator', ['$scope', function($scope) {
-  $scope.floors = 1;
+  $scope.floors = 2;
   $scope.sqFt = 1500;
-  $scope.built = 1977;
-  $scope.utilities = 205;
+  $scope.utilities = 210;
 
   this.updatePrice = function() {
     var insulation = ($scope.sqFt / Number($scope.floors)) * 0.95;
@@ -13,14 +12,11 @@ angular.module('TreeHouse.calculator', [])
   };
 
   this.updateSavings = function() {
-    $scope.age = new Date().getFullYear() - $scope.built;
     $scope.savings = $scope.utilities * 0.2;
     $scope.payback = ($scope.price / $scope.savings) / 12;
   };
 
   $scope.$watch('sqFt', this.updatePrice);
   $scope.$watch('floors', this.updatePrice);
-
-  $scope.$watch('built', this.updateSavings);
   $scope.$watch('utilities', this.updateSavings);
 }]);
