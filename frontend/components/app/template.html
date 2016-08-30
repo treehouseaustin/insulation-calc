@@ -24,11 +24,12 @@
   <modal ng-class="{ open: $ctrl.showPrice }">
     <button class="button" ng-click="$ctrl.togglePrice()">&larr; Back</button>
     <div class="row">
-      <div class="column large-4 large-offset-2">
+      <div class="column large-6 large-offset-2">
+        <p>Could be less depending on current level of insulation</p>
         <label>Estimated Price</label>
         <h2><small>$ </small>{{ price | currency:'':0 }}</h2>
       </div>
-      <div class="column large-4 end">
+      <div class="column large-3 end">
         <label>Potential Savings</label>
         <h2><small>$ </small>{{ savings | currency:'':0 }}<small> mo</small></h2>
       </div>
