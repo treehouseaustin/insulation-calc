@@ -12,12 +12,6 @@ angular.module('TreeHouse.calculator', [])
     $scope.price += $scope.price * 0.0825;
   };
 
-  this.updateSavings = function() {
-    $scope.savings = $scope.utilities * 0.2;
-    $scope.payback = ($scope.price / $scope.savings) / 12;
-  };
-
   $scope.$watch('sqFt', this.updatePrice);
   $scope.$watch('floors', this.updatePrice);
-  $scope.$watch('utilities', this.updateSavings);
 }]);
