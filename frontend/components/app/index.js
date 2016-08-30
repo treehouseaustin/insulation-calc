@@ -1,7 +1,7 @@
 angular.module('TreeHouse.component.app', [])
 .component('app', {
   template: require('./template.html'),
-  controller: ['$timeout', function($timeout) {
+  controller: ['$scope', '$timeout', function($scope, $timeout) {
     this.showPrice = false;
 
     this.togglePrice = function() {
@@ -16,5 +16,7 @@ angular.module('TreeHouse.component.app', [])
       angular.element(document.querySelectorAll('sf-lead-form form')).scope().sflead.$setPristine();
       this.lead = { type: this.lead.type };
     }
+
+    $scope.$on('trh:form:submitted', () => $timeout(() => this.togglePrice(), 3000));
   }]
 });
