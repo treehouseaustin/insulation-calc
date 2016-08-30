@@ -13,19 +13,19 @@ tri-panel {
   section {
     &:nth-child(1) {
       trh-icon svg {
-        height: 96px;
-        width: 96px;
+        height: 6rem;
+        width: 6rem;
       }
       h1 {
         @include trh-font(gotham narrow, medium);
         color: #38505B;
-        font-size: 72px;
+        font-size: 4.5rem;
         letter-spacing: -0.33px;
-        line-height: 72px;
-        padding-top: 37px;
+        line-height: 4.5rem;
+        padding-top: 2.3rem;
         small {
           color: trh-color(slate);
-          font-size: 72px;
+          font-size: 4.5rem;
         }
       }
     }
@@ -38,32 +38,32 @@ tri-panel {
 .pricing-calculator {
   label {
     color: trh-color(slate, darker, 0.4);
-    font-size: 18px;
+    font-size: 1.125rem;
     letter-spacing: 0.38px;
-    line-height: 36px;
+    line-height: 2.25rem;
   }
   h2 {
     @include trh-font(gotham narrow, book);
-    font-size: 64px;
-    line-height: 60px;
-    padding-bottom: 12px;
+    font-size: 4rem;
+    line-height: 3.75rem;
+    padding-bottom: 0.75rem;
     small {
       color: trh-color(slate, dark);
-      font-size: 48px;
+      font-size: 3rem;
       text-transform: uppercase;
     }
   }
   button.primary {
     border-radius: 3px;
-    font-size: 20px;
+    font-size: 1.25rem;
     letter-spacing: 1.25px;
-    line-height: 72px;
+    line-height: 4.5rem;
   }
   slider {
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
     display: block;
-    margin: 0 20px 36px;
+    margin: 0 1.25rem 2.25rem;
     position: relative;
     &[model=floors]:after,
     &[model=floors]:before,
@@ -73,20 +73,20 @@ tri-panel {
       border-radius: 100%;
       content: ' ';
       display: block;
-      height: 40px;
-      right: -20px;
+      height: 2.5rem;
+      right: -1.25rem;
       position: absolute;
       pointer-events: none;
       top: 0;
-      width: 40px;
+      width: 2.5rem;
       z-index: 3;
     }
     &[model=floors]:before {
-      left: -20px;
+      left: -1.25rem;
       right: unset;
     }
     &[model=floors] .ch-slider:after {
-      right: calc(50% - 20px);
+      right: calc(50% - 1.25rem);
     }
   }
 }
@@ -102,43 +102,43 @@ modal {
   label {
     @include trh-font(gotham narrow, medium);
     color: trh-color(slate);
-    font-size: 18px;
+    font-size: 1.125rem;
     letter-spacing: 0.38px;
-    line-height: 36px;
+    line-height: 2.25rem;
   }
   .column.large-offset-2 {
     border-right: 1px solid trh-color(slate);
-    margin-right: 4rem;
+    margin-right: 2rem;
   }
   h2 {
     @include trh-font(gotham narrow, book);
     color: #FFF;
-    font-size: 78px;
+    font-size: 4.875rem;
     letter-spacing: 0;
-    line-height: 60px;
+    line-height: 3.75rem;
     small {
       color: trh-color(slate);
-      font-size: 48px;
+      font-size: 3rem;
       text-transform: uppercase;
     }
   }
   h3 {
     @include trh-font(gotham narrow, medium);
     color: #FFF;
-    font-size: 24px;
-    line-height: 24px;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
   }
   p {
     @include trh-font(gotham narrow, medium);
     background: trh-color(slate, darker);
     border-radius: 3px;
     color: #FFF;
-    font-size: 14px;
-    left: 43%;
+    font-size: 0.875rem;
+    left: 28.75rem;
     padding: 1rem;
     position: absolute;
-    top: 42px;
-    width: 180px;
+    top: 2.625rem;
+    width: 11.25rem;
   }
   input[type=submit] {
     opacity: 0 !important;
