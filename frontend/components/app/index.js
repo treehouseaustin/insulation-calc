@@ -10,12 +10,12 @@ angular.module('TreeHouse.component.app', [])
 
       var firstName = document.getElementById('first_name');
       $timeout(() => firstName[this.showPrice ? 'focus' : 'blur'](), 400);
-    }
+    };
 
     this.resetLeadForm = function() {
       angular.element(document.querySelectorAll('sf-lead-form form')).scope().sflead.$setPristine();
       this.lead = { type: this.lead.type };
-    }
+    };
 
     $scope.$on('trh:form:submitted', () => $timeout(() => this.togglePrice(), 3000));
   }]
