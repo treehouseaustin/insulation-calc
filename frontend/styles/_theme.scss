@@ -96,6 +96,7 @@ modal {
     @include trh-button-colorize($color-slate-darker, $color-slate-dark, $color-slate, $color-slate-light);
     left: 1rem;
     min-width: 0;
+    padding: 0 1rem;
     position: absolute;
     top: 1rem;
   }
