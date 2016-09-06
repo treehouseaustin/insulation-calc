@@ -35,3 +35,8 @@ These are also pushed to the production domain. However, both Cloudflare and
 AWS Cloudfront caches must be purged before changes are visible to the public:
 
 https://kiosk.tree.house/insulation-calc/master/index.html
+
+## Updating Kiosk
+
+The kiosk can be manually refreshed by quitting the application (double-tap the
+home button) and re-opening. Make sure that CDN caches have been cleared first.
